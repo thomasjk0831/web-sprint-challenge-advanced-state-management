@@ -13,7 +13,7 @@ export default (state=initialState, action) => {
         case 'FETCH_SUCCESS':
             return {
                 ...state,
-                smurfs : [...state.smurfs, action.payload],
+                smurfs : [...action.payload],
                 loading: false
             }
         case 'POST_SMURFS':

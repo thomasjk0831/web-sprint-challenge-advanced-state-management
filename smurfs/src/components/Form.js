@@ -13,7 +13,6 @@ function Form(props){
     
 
     const submitHandler = (e) => {
-        e.preventDefault()
         props.postSmurfs(value)
     }
 
@@ -47,7 +46,7 @@ function Form(props){
                     </input> 
                 </label>
                    
-                <label>
+                <label>Height
                 <input
                       name= "height"
                       type="text"

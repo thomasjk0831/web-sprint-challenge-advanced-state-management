@@ -8,26 +8,14 @@ function App(props){
   useEffect(()=>{
     props.fetchSmurfs()
   },[])
-  const [ temp ] = props.smurfs
-  console.log("from app", temp)
-  props.smurfs.forEach(element => {
-    element.forEach((item)=>{
-      console.log("from foreach", item.name)
-    })
-  });
+  console.log("from app", props.smurfs)
+  
 
   return (
     <div>
       {
-        props.smurfs.map(element => {
-         return element.map(smurf=>{
-            return (<div> 
-              <p>name: {smurf.name} </p>
-              <p>age: {smurf.age}</p>
-              <p>height: {smurf.height}</p>
-              
-              </div>)
-          })
+        props.smurfs.map((item)=> {
+          return <p>{item.name}</p>
         })
           
         
