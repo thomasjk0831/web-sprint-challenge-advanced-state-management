@@ -12,20 +12,24 @@ function App(props){
   
 
   return (
-    <div>
+    <div className = "main-container">
+      <div className="form">
+
+      <Form />
+      </div>
+
       {
         props.smurfs.map((item)=> {
-          return <div>
-                   <p>{item.name}</p>
-                   <p>{item.age}</p>
-                   <p>{item.height}</p>
+          return <div className="info">
+                   <p>Name:{item.name}</p>
+                   <p>Age:{item.age}</p>
+                   <p>Height:{item.height}</p>
                   </div>
         })
           
         
       }
 
-      <Form />
 
     </div>
 
