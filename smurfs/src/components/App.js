@@ -15,7 +15,11 @@ function App(props){
     <div>
       {
         props.smurfs.map((item)=> {
-          return <p>{item.name}</p>
+          return <div>
+                   <p>{item.name}</p>
+                   <p>{item.age}</p>
+                   <p>{item.height}</p>
+                  </div>
         })
           
         
